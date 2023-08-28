@@ -1,0 +1,73 @@
+name: Deploy site to Github pages
+on:
+  # Build the site when there is new data
+  # This signal is sent directly from the `quacs-oxy-data` repository
+  repository_dispatch:
+    types: [scrape_complete]
+
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build-site:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup node to build site
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+
+      - name: Fetch the local repository
+        uses: actions/checkout@v3
+
+      - name: Get the upstream quacs sources
+        uses: actions/checkout@v3
+        with:
+          repository: "quacs/quacs"
+          ref: "master"
+          path: "quacs/"
+
+      - name: Import assets into quacs sources
+        working-directory: ./quacs/
+        run: cp ../*.svg site/src/assets/images
+
+      - name: Patch the quacs sources
+        working-directory: ./quacs/
+        run: git apply ../patches/*
+
+      - name: Install wasm-pack
+        run: curl https://rustwasm.github.io/wasm-pack/installer/init.sh -sSf | sh
+
+      - name: Install the yarn dependencies
+        working-directory: ./quacs/site
+        run: yarn install --frozen-lockfile
+
+      - name: Build the site
+        working-directory: ./quacs/site
+        run: |
+          mkdir quacs-site
+          yarn build -a -o quacs-site
+
+      - name: Setup pages
+        uses: actions/configure-pages@v3
+
+      - name: Upload artifact
+        working-directory: ./quacs/site
+        uses: actions/upload-pages-artifact@v2
+        with:
+          path: './quacs-site'
+
+      - name: Deploy to Github pages
+        id: deployment
+        uses: actions/deploy-pages@v2

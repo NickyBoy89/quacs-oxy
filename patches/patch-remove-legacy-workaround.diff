@@ -1,0 +1,13 @@
+diff --git a/site/scripts/build_single.sh b/site/scripts/build_single.sh
+index 7fe15f4..8c2190f 100755
+--- a/site/scripts/build_single.sh
++++ b/site/scripts/build_single.sh
+@@ -3,7 +3,7 @@
+ # This script builds a single semester (stored in $CURR_SEMESTER).  It relies on some setup
+ # from build_entry.sh (namely setting up one-time dependencies like Umami and quacs-data)
+ # so it should never be called on its own.
+-export NODE_OPTIONS=--openssl-legacy-provider # needed because OpenSSL deprecated hash used in Webpack 4
++#export NODE_OPTIONS=--openssl-legacy-provider # needed because OpenSSL deprecated hash used in Webpack 4
+ 
+ ROOT_DIRECTORY=$(pwd)
+ 

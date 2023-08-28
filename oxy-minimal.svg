@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="200"
+   height="60"
+   viewBox="0 0 52.916666 15.875"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1 (c4e8f9ed74, 2021-05-24)"
+   sodipodi:docname="oxy-minimal.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     units="px"
+     inkscape:snap-bbox="true"
+     inkscape:snap-bbox-edge-midpoints="true"
+     inkscape:snap-bbox-midpoints="true"
+     inkscape:zoom="6.2217172"
+     inkscape:cx="74.175664"
+     inkscape:cy="52.236383"
+     inkscape:window-width="2478"
+     inkscape:window-height="1371"
+     inkscape:window-x="82"
+     inkscape:window-y="32"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2">
+    <rect
+       x="5.1432748"
+       y="363.88669"
+       width="768.91956"
+       height="419.17688"
+       id="rect4851" />
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <text
+       xml:space="preserve"
+       transform="matrix(0.26458333,0,0,0.26458333,2.4239695,-100.57346)"
+       id="text4849"
+       style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;white-space:pre;shape-inside:url(#rect4851);fill:#f56600;fill-opacity:1;stroke:none"><tspan
+         x="5.1425781"
+         y="435.61852"
+         id="tspan48368"><tspan
+           style="font-size:80px;font-family:'EB Garamond';-inkscape-font-specification:'EB Garamond, Normal'"
+           id="tspan48366">OXY</tspan></tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-weight:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.264583"
+       x="382.73196"
+       y="-49.670101"
+       id="text45676"><tspan
+         sodipodi:role="line"
+         id="tspan45674"
+         style="stroke-width:0.264583"
+         x="382.73196"
+         y="-49.670101">1</tspan></text>
+  </g>
+</svg>

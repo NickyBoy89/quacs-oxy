@@ -1,0 +1,38 @@
+diff --git a/site/src/components/UnofficialScheduleModal.vue b/site/src/components/UnofficialScheduleModal.vue
+index 963c5a0..4ee1242 100644
+--- a/site/src/components/UnofficialScheduleModal.vue
++++ b/site/src/components/UnofficialScheduleModal.vue
+@@ -1,7 +1,7 @@
+ <template>
+   <b-modal
+     title="Course offerings are not official!"
+-    :visible="false"
++    :visible="true"
+     centered
+     size="xl"
+     :hide-footer="!acceptedThatScheduleIsUnofficial"
+@@ -12,17 +12,17 @@
+     hide-header-close
+   >
+     <span>
+-      QuACS is currently based off of a pre-release schedule for the spring
+-      semester. Course offerings and associated faculty are subject to change,
+-      and prerequisite checking is not available.
++      QuACS is updated every hour from data for the current semester.
++      This means course offerings and associated faculty are subject to change,
++      and current seating numbers may be behind.
++      If in doubt, you should always refer to course counts
+     </span>
+     <br />
+     <br />
+     <b-form-checkbox v-model="acceptedThatScheduleIsUnofficial"
+-      >I understand that the current scheduling info is unreliable and shouldn't
+-      in any way be considered representative of the upcoming semester's
+-      schedule.</b-form-checkbox
+-    >
++      >I understand that the current scheduling may be unreliable and I should
++      always consult course counts to make the final decision for any courses.
++      </b-form-checkbox>
+     <br />
+     <span
+       >(Please click the checkbox to accept the warning and continue to the

@@ -1,0 +1,13 @@
+diff --git a/site/scripts/build_entry.sh b/site/scripts/build_entry.sh
+index 9f00128..af7c570 100755
+--- a/site/scripts/build_entry.sh
++++ b/site/scripts/build_entry.sh
+@@ -8,7 +8,7 @@ if cat public/umami.js | grep -q nginx; then exit 1; fi
+ 
+ # Update our local dependencies (quacs-rs), or clone if possible
+ echo Retrieving latest quacs-data
+-git -C src/store/data pull || git clone https://github.com/quacs/quacs-data --depth=2 src/store/data || exit 1
++git -C src/store/data pull || git clone https://github.com/NickyBoy89/quacs-oxy-data --depth=2 src/store/data || exit 1
+ 
+ CURR_DIR=$(dirname "${BASH_SOURCE[0]}")
+ 

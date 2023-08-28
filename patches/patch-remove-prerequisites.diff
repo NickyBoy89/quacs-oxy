@@ -1,0 +1,70 @@
+diff --git a/site/src/views/Prerequisites.vue b/site/src/views/Prerequisites.vue
+index 5794ce5..c7275cc 100644
+--- a/site/src/views/Prerequisites.vue
++++ b/site/src/views/Prerequisites.vue
+@@ -90,64 +90,7 @@
+             <!-- {{ $store.state }} -->
+           </b-tab>
+           <b-tab title="Import Courses">
+-            <h3>Instructions</h3>
+-            <p>
+-              In order to import your courses you will need to upload your
+-              transcript. Don't worry, QuACS is 100% client-side which means
+-              that all the data in your transcript stays on your computer and
+-              there is no way for anyone - including the QuACS developers - to
+-              view the data.
+-            </p>
+-            <h3 class="mobile-only">
+-              NOTE: Transcript importing does not work on mobile because there
+-              is no way to get your transcript as an html file. We recommend you
+-              use a computer for checking prerequisites, or type out your
+-              courses by hand if you wish to stay on mobile.
+-              <br /><br />
+-            </h3>
+-            <p>
+-              1) Go to
+-              <a href="https://sis.rpi.edu" target="_blank"
+-                >https://sis.rpi.edu</a
+-              >
+-            </p>
+-            <p>2) Log in and navigate to the Student Menu tab</p>
+-            <p>3) Click "View Transcript"</p>
+-            <p>
+-              4) Press the Submit button (leave the options as "All Levels" and
+-              "Unofficial Web Transcript")
+-            </p>
+-            <p>
+-              5) Press CTRL+S on your keyboard (or right click and press "Save
+-              As") and save the page as a .html file.
+-            </p>
+-            <p>
+-              6) Upload the .html file here on QuACS and click "Import
+-              Transcript"
+-            </p>
+-            <p></p>
+-            <form onsubmit="return false;" method="post">
+-              <b-form-file
+-                id="transcriptFileUpload"
+-                v-model="file"
+-                type="file"
+-                name="file upload"
+-                accept=".html,.htm"
+-                :state="Boolean(file)"
+-                placeholder="Click to upload your transcript or drop it here..."
+-                drop-placeholder="Drop transcript here..."
+-                required
+-                :title="
+-                  prerequisiteChecking
+-                    ? ''
+-                    : 'Enable prerequisites to upload your transcript'
+-                "
+-                :disabled="!prerequisiteChecking"
+-                @change="importTranscript()"
+-                v-b-tooltip.disabled="prerequisiteChecking"
+-                v-b-tooltip.hover
+-              ></b-form-file>
+-            </form>
++            <h3 style="color: red">This feature has not been implemented yet</h3>
+           </b-tab>
+         </b-tabs>
+       </b-card>

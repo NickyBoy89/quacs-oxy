@@ -1,0 +1,49 @@
+diff --git a/site/src/App.vue b/site/src/App.vue
+index acc5d81..5800020 100644
+--- a/site/src/App.vue
++++ b/site/src/App.vue
+@@ -6,7 +6,9 @@
+       <nav class="navbar navbar-expand-lg navbar-light bg-light">
+         <router-link class="navbar-brand" to="/"
+           ><img :src="getLogo" alt="QuACS Home" style="height: 27px"
+-        /></router-link>
++        />
++        <img src="@/assets/images/oxy-minimal.svg" alt="OXY logo" style="height: 27px" />
++        </router-link>
+         <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+         <b-collapse id="nav-collapse" is-nav>
+           <b-input-group>
+@@ -138,7 +140,7 @@
+         </a>
+       </div>
+       <div class="footer-sponsors">
+-        <router-link to="/sponsors"> View our sponsors</router-link>
++        <router-link to="/sponsors"> View the QuACS sponsors</router-link>
+       </div>
+       <div class="footer-updated">
+         Last updated {{ lastUpdated }} (<a
+diff --git a/site/src/components/AdvertImage.vue b/site/src/components/AdvertImage.vue
+index 27a6376..9eb8a0d 100644
+--- a/site/src/components/AdvertImage.vue
++++ b/site/src/components/AdvertImage.vue
+@@ -2,7 +2,6 @@
+   <a :href="advertisement.url" rel="noopener" target="_blank">
+     <div
+       class="sponsor-img"
+-      :style="'background:' + advertisement.backgroundColor"
+     >
+       <img
+         :src="baseUrl + advertisement.desktop_path"
+diff --git a/site/src/components/Advertisement.vue b/site/src/components/Advertisement.vue
+index a8b8c58..ebd2e7b 100644
+--- a/site/src/components/Advertisement.vue
++++ b/site/src/components/Advertisement.vue
+@@ -3,7 +3,7 @@
+     <AdvertImage :advertisement="currentAdvertisement" />
+ 
+     <a href="https://patreon.com/quacs" rel="noopener" target="_blank"
+-      ><span>Want your ad here? Support us on Patreon!</span></a
++      ><span>Want to support the QuACS developers? Support them on patreon!</span></a
+     >
+   </div>
+ </template>
