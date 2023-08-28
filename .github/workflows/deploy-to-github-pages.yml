@@ -63,10 +63,9 @@ jobs:
         uses: actions/configure-pages@v3
 
       - name: Upload artifact
-        working-directory: ./quacs/site
         uses: actions/upload-pages-artifact@v2
         with:
-          path: './quacs-site'
+          path: './quacs/site/quacs-site'
 
       - name: Deploy to Github pages
         id: deployment
