@@ -35,7 +35,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           repository: "quacs/quacs"
-          ref: "master"
+          ref: "22f9958d49565ad4b1d3cc4047b10eca4db3d5f6"
           path: "quacs/"
 
       - name: Import assets into quacs sources
