@@ -1,0 +1,4 @@
+#Generated files
+*.json
+mod.rs
+cached_response.html
