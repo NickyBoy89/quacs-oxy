@@ -1,6 +1,4 @@
-![Quacs OXY Logo](quacs-oxy-logo.svg)
-
-# QuACS OXY
+![Quacs OXY](quacs-oxy-logo.svg)
 
 ## About
 
